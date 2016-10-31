@@ -1,0 +1,6 @@
+*{margin:0; padding:0;}
+html,body{ height:100%; overflow:hidden;}
+.box{ width:700px; height:400px; margin:100px auto 50px; background:url(/images/case_1/2.jpg) no-repeat; position:relative;}
+.box span{ position:absolute; background:url(/images/case_1/1.jpg) no-repeat; -webkit-transform:perspective(800px) rotateY(0deg) rotateX(0deg) translate(0,0); opacity:1;}
+p{ width: 700px; height: 20px; line-height: 20px; font-size: 20px; font-weight: bold; text-align: center; margin: 0 auto; background:-webkit-linear-gradient(-45deg,red,orange,red,yellow,aqua,pink,red); 
+	-webkit-background-clip:text;	color:rgba(0,0,0,0); ;}
