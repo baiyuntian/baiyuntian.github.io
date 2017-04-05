@@ -1,0 +1,78 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/style.css" type="text/css" />
+</head>
+<body class="fis3">
+    <div class="html_head">
+        <div class="top">
+            <p><span>白梦超个人博客</span>前端开发大海中的一朵浪花</p>
+        </div>
+        <div class="nav">
+            <ul class="nav">
+                <li><a href="/">首页</a></li>
+                <li><a href="">HTML</a></li>
+                <li><a href="/views/css.html">CSS</a></li>
+                <li><a href="">JS</a></li>
+                <li><a href="/views/git.html">GIT</a></li>
+                <li class="on"><a href="/views/fis.html">FIS</a></li>
+                <li><a href="/views/case.html">CASE</a></li>
+            </ul>
+        </div>
+    </div>
+    <section class="main">
+        <div class="title">
+            <h2>fis3 简单操作</h2>
+            <hr>
+            <ul>
+                
+            </ul>
+        </div>
+        <div class="directive" id="git_clone">
+            <h3 class="directive_title">一 、压缩资源</h3>
+            <hr>
+            <p>为了减少资源网络传输的大小，通过压缩器对 js、css、图片进行压缩是一直以来前端工程优化的选择。在 FIS3 中这个过程非常简单，通过给文件配置压缩器即可。</p>
+            <div class="code">
+                <pre><code>fis.match('*.js', {<br>&nbsp;&nbsp;optimizer: fis.plugin('uglify-js')<br>});</code></pre>
+            </div>
+            <p><span class="color">fis-optimizer-uglify-js</span> 插件进行压缩，已内置</p>
+            <div class="code">
+                <pre><code>fis.match('*.css', {<br>&nbsp;&nbsp;optimizer: fis.plugin('clean-css')<br>});</code></pre>
+            </div>
+            <p><span class="color">fis-optimizer-clean-css</span> 插件进行压缩，已内置</p>
+            <div class="code">
+                <pre><code>fis.match('*.png', {<br>&nbsp;&nbsp;optimizer: fis.plugin('png-compressor')<br>});</code></pre>
+            </div>
+            <p><span class="color">fis-optimizer-png-compressor</span> 插件进行压缩，已内置</p>
+        </div>
+
+        <div class="directive">
+            <div class="code">
+                <pre><code>fis3 release -w</code></pre>
+            </div>
+            <p><span class="color">fis3 release -w</span>,fis3默认内置了<span class="color">fis3-command-release</span>插件，提供了文件监听和浏览器自动刷新功能，在release的时候添加-w或-L参数就可以，这样可以很方便的部署代码。 </p>
+            <div class="code">
+                <pre><code>ffis3 server -h</code></pre>
+            </div>
+            <p><span class="color">fis3 server -h</span>,查看帮助 </p>
+            <div class="code">
+                <pre><code>fis3 server start</code></pre>
+            </div>
+            <p><span class="color">fis3 server start </span>,启动fis服务 </p>
+        </div>
+        
+        <div class="question_title">
+            <h2>工作中遇到问题总结及解决方案</h2>
+            <hr>
+        </div>
+        <div class="question">
+            <h2 class="title">git branch -r 不能显示远程分支问题</h2>
+            <p>以jquery版本库为例：当 git clone jq版本库到本地时，git branch -r 可以显示远程分支。当 git remote remove origin 取消与远程版本库的连接，再 git remote add origin &lt;版本库&gt; 添加远程连接，这时 git branch -r 将不再显示远程分支，需要 get fetch 更新远程主机，就可以了</p>
+            
+        </div>
+    </section>
+    <div class="html_foot">
+        <p>本网站纯属个人兴趣制作，当中的内容有些摘自其他文章，有些是自己工作中的总结，而且本站制作目的只是为了总结自己遇到的问题及解决方案，以便以后方便查阅，所以不涉及到任何侵权问题，而且本网站不保证内容一定正确，望谅解。</p>
+    </div>
+</body>
+</html>

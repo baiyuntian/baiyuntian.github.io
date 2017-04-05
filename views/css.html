@@ -1,0 +1,385 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/style.css" type="text/css" />
+</head>
+<body class="css3">
+    <div class="html_head">
+        <div class="top">
+            <p><span>白梦超个人博客</span>前端开发大海中的一朵浪花</p>
+        </div>
+        <div class="nav">
+            <ul class="nav">
+                <li><a href="/">首页</a></li>
+                <li><a href="">HTML</a></li>
+                <li class="on"><a href="/views/css.html">CSS</a></li>
+                <li><a href="">JS</a></li>
+                <li><a href="/views/git.html">GIT</a></li>
+                <li><a href="/views/fis.html">FIS</a></li>
+                <li><a href="/views/case.html">CASE</a></li>
+            </ul>
+        </div>
+    </div>
+    <section class="html_main">
+        <div class="title">
+            <h2>css3</h2>
+            <hr>
+            <ul>
+                <li><a href="#css3_1">css3 选择器</a></li>
+            </ul>
+        </div>
+        <div class="directive" id="css3_1">
+            <h3 class="directive_title">一 、css3 选择器</h3>
+            <hr>
+            <table class="dataintable">
+                <tr>
+                <th style="width: 30%;">选择器</th>
+                <th style="width: 25%;">例子</th>
+                <th style="width: 40%;">例子描述</th>
+                <th style="width: 5%;">CSS</th>
+                <!-- <th>兼容</th> -->
+                </tr>
+
+                <tr>
+                <td><i>class</i></td>
+                <td>.intro</td>
+                <td>选择 class=&quot;intro&quot; 的所有元素。</td>
+                <td>1</td>
+                </tr>
+
+                <tr>
+                <td><i>id</i></td>
+                <td>#firstname</td>
+                <td>选择 id=&quot;firstname&quot; 的所有元素。</td>
+                <td>1</td>
+                </tr>
+
+                <tr>
+                <td>*</td>
+                <td>*</td>
+                <td>选择所有元素。</td>
+                <td>2</td>
+                </tr>
+
+                <tr>
+                <td><i>element</i></td>
+                <td>p</td>
+                <td>选择所有 &lt;p&gt; 元素。</td>
+                <td>1</td>
+                </tr>
+
+                <tr>
+                <td><i>element</i>,<i>element</i></td>
+                <td>div,p</td>
+                <td>选择所有 &lt;div&gt; 元素和所有 &lt;p&gt; 元素。</td>
+                <td>1</td>
+                </tr>
+
+                <tr>
+                <td><i>element</i> <i>element</i></td>
+                <td>div p</td>
+                <td>选择 &lt;div&gt; 元素内部的所有 &lt;p&gt; 元素。</td>
+                <td>1</td>
+                </tr>
+
+                <tr>
+                <td><i>element</i>&gt;<i>element</i></td>
+                <td>div&gt;p</td>
+                <td>选择父元素为 &lt;div&gt; 元素的所有 &lt;p&gt; 元素。</td>
+                <td>2</td>
+                </tr>
+
+                <tr>
+                <td><i>element</i>+<i>element</i></td>
+                <td>div+p</td>
+                <td>选择紧接在 &lt;div&gt; 元素之后的所有 &lt;p&gt; 元素。</td>
+                <td>2</td>
+                </tr>
+
+                <tr>
+                <td>[<i>attribute</i>]</td>
+                <td>[target]</td>
+                <td>选择带有 target 属性所有元素。</td>
+                <td>2</td>
+                </tr>
+
+                <tr>
+                <td>[<i>attribute</i>=<i>value</i>]</td>
+                <td>[target=_blank]</td>
+                <td>选择 target=&quot;_blank&quot; 的所有元素。</td>
+                <td>2</td>
+                </tr>
+
+                <tr>
+                <td>[<i>attribute</i>~=<i>value</i>]</td>
+                <td>[title~=flower]</td>
+                <td>选择 title 属性包含单词 &quot;flower&quot; 的所有元素。</td>
+                <td>2</td>
+                </tr>
+
+                <tr>
+                <td>[<i>attribute</i>|=<i>value</i>]</td>
+                <td>[lang|=en]</td>
+                <td>选择 lang 属性值以 &quot;en&quot; 开头的所有元素。</td>
+                <td>2x</td>
+                </tr>
+
+                <tr>
+                <td>:link</td>
+                <td>a:link</td>
+                <td>选择所有未被访问的链接。</td>
+                <td>1</td>
+                </tr>
+
+                <tr>
+                <td>:visited</td>
+                <td>a:visited</td>
+                <td>选择所有已被访问的链接。</td>
+                <td>1</td>
+                </tr>
+
+                <tr>
+                <td>:active</td>
+                <td>a:active</td>
+                <td>选择活动链接。</td>
+                <td>1</td>
+                </tr>
+
+                <tr>
+                <td>:hover</td>
+                <td>a:hover</td>
+                <td>选择鼠标指针位于其上的链接。</td>
+                <td>1</td>
+                </tr>
+
+                <tr>
+                <td>:focus</td>
+                <td>input:focus</td>
+                <td>选择获得焦点的 input 元素。</td>
+                <td>2</td>
+                </tr>
+
+                <tr>
+                <td>:first-letter</td>
+                <td>p:first-letter</td>
+                <td>选择每个 &lt;p&gt; 元素的首字母。</td>
+                <td>1</td>
+                </tr>
+
+                <tr>
+                <td>:first-line</td>
+                <td>p:first-line</td>
+                <td>选择每个 &lt;p&gt; 元素的首行。</td>
+                <td>1</td>
+                </tr>
+
+                <tr>
+                <td>:first-child</td>
+                <td>p:first-child</td>
+                <td>选择属于父元素的第一个子元素的每个 &lt;p&gt; 元素。</td>
+                <td>2</td>
+                </tr>
+
+                <tr>
+                <td>:before</td>
+                <td>p:before</td>
+                <td>在每个 &lt;p&gt; 元素的内容之前插入内容。</td>
+                <td>2</td>
+                </tr>
+
+                <tr>
+                <td>:after</td>
+                <td>p:after</td>
+                <td>在每个 &lt;p&gt; 元素的内容之后插入内容。</td>
+                <td>2</td>
+                </tr>
+
+                <tr>
+                <td>:lang(<i>language</i>)</td>
+                <td>p:lang(it)</td>
+                <td>选择带有以 &quot;it&quot; 开头的 lang 属性值的每个 &lt;p&gt; 元素。</td>
+                <td>2x</td>
+                </tr>
+
+                <tr>
+                <td><i>element1</i>~<i>element2</i></td>
+                <td>p~ul</td>
+                <td>选择前面有 &lt;p&gt; 元素的每个 &lt;ul&gt; 元素。</td>
+                <td>3</td>
+                </tr>
+
+                <tr>
+                <td>[<i>attribute</i>^=<i>value</i>]</td>
+                <td>a[src^=&quot;https&quot;]</td>
+                <td>选择其 src 属性值以 &quot;https&quot; 开头的每个 &lt;a&gt; 元素。</td>
+                <td>3</td>
+                </tr>
+
+                <tr>
+                <td>[<i>attribute</i>$=<i>value</i>]</td>
+                <td>a[src$=&quot;.pdf&quot;]</td>
+                <td>选择其 src 属性以 &quot;.pdf&quot; 结尾的所有 &lt;a&gt; 元素。</td>
+                <td>3</td>
+                </tr>
+
+                <tr>
+                <td>[<i>attribute</i>*=<i>value</i>]</td>
+                <td>a[src*=&quot;abc&quot;]</td>
+                <td>选择其 src 属性中包含 &quot;abc&quot; 子串的每个 &lt;a&gt; 元素。</td>
+                <td>3</td>
+                </tr>
+
+                <tr>
+                <td>:first-of-type</td>
+                <td>p:first-of-type</td>
+                <td>选择属于其父元素的首个 &lt;p&gt; 元素的每个 &lt;p&gt; 元素。</td>
+                <td>3</td>
+                </tr>
+
+                <tr>
+                <td>:last-of-type</td>
+                <td>p:last-of-type</td>
+                <td>选择属于其父元素的最后 &lt;p&gt; 元素的每个 &lt;p&gt; 元素。</td>
+                <td>3</td>
+                </tr>
+
+                <tr>
+                <td>:only-of-type</td>
+                <td>p:only-of-type</td>
+                <td>选择属于其父元素唯一的 &lt;p&gt; 元素的每个 &lt;p&gt; 元素。</td>
+                <td>3</td>
+                </tr>
+
+                <tr>
+                <td>:only-child</td>
+                <td>p:only-child</td>
+                <td>选择属于其父元素的唯一子元素的每个 &lt;p&gt; 元素。</td>
+                <td>3</td>
+                </tr>
+
+                <tr>
+                <td>:nth-child(<i>n</i>)</td>
+                <td>p:nth-child(2)</td>
+                <td>选择属于其父元素的第二个子元素的每个 &lt;p&gt; 元素。</td>
+                <td>3</td>
+                </tr>
+
+                <tr>
+                <td>:nth-last-child(<i>n</i>)</td>
+                <td>p:nth-last-child(2)</td>
+                <td>同上，从最后一个子元素开始计数。</td>
+                <td>3</td>
+                </tr>
+
+                <tr>
+                <td>:nth-of-type(<i>n</i>)</td>
+                <td>p:nth-of-type(2)</td>
+                <td>选择属于其父元素第二个 &lt;p&gt; 元素的每个 &lt;p&gt; 元素。</td>
+                <td>3</td>
+                </tr>
+
+                <tr>
+                <td>:nth-last-of-type(<i>n</i>)</td>
+                <td>p:nth-last-of-type(2)</td>
+                <td>同上，但是从最后一个子元素开始计数。</td>
+                <td>3</td>
+                </tr>
+
+                <tr>
+                <td>:last-child</td>
+                <td>p:last-child</td>
+                <td>选择属于其父元素最后一个子元素每个 &lt;p&gt; 元素。</td>
+                <td>3</td>
+                </tr>
+
+                <tr>
+                <td>:root</td>
+                <td>:root</td>
+                <td>选择文档的根元素。</td>
+                <td>3</td>
+                </tr>
+
+                <tr>
+                <td>:empty</td>
+                <td>p:empty</td>
+                <td>选择没有子元素的每个 &lt;p&gt; 元素（包括文本节点）。</td>
+                <td>3</td>
+                </tr>
+
+                <tr>
+                <td>:target</td>
+                <td>#news:target</td>
+                <td>选择当前活动的 #news 元素。</td>
+                <td>3</td>
+                </tr>
+
+                <tr>
+                <td>:enabled</td>
+                <td>input:enabled</td>
+                <td>选择每个启用的 &lt;input&gt; 元素。</td>
+                <td>3</td>
+                </tr>
+
+                <tr>
+                <td>:disabled</td>
+                <td>input:disabled</td>
+                <td>选择每个禁用的 &lt;input&gt; 元素</td>
+                <td>3</td>
+                </tr>
+
+                <tr>
+                <td>:checked</td>
+                <td>input:checked</td>
+                <td>选择每个被选中的 &lt;input&gt; 元素。</td>
+                <td>3</td>
+                </tr>
+
+                <tr>
+                <td>:not(<i>selector</i>)</td>
+                <td>:not(p)</td>
+                <td>选择非 &lt;p&gt; 元素的每个元素。</td>
+                <td>3</td>
+                </tr>
+
+                <tr>
+                <td>::selection</td>
+                <td>::selection</td>
+                <td>选择被用户选取的元素部分。</td>
+                <td>3</td>
+                </tr>
+                </table>
+        </div>
+
+        <!-- <div class="directive" id="git_checkout">
+            <h3 class="directive_title">八 、git checkout</h3>
+            <hr>
+            <p><span class="color">git checkout</span>命令用于切换分支，将分支切换到dev<p>
+            <div class="code">
+                <pre><code>$ git checkout dev<br>$ git branch<br>*dev<br>master</code></pre>
+            </div>
+            <p><span class="color">git checkout -b</span>创建并切换到新分支</p>
+            <div class="code">
+                <pre><code>$ git branch<br>*master<br><br>$ git checkout -b dev<br><br>$ git branch<br>*dev<br>master</code></pre>
+            </div>
+        </div> -->
+        
+        <div class="question_title">
+            <h2>平时遇到问题及解决方案</h2>
+            <hr>
+        </div>
+        <div class="question">
+            <h2 class="title">:link,visited,hover,active  页面使用顺序</h2>
+            <p>a:link，a:visited ，a:hover，a:active页面中按照此顺序使用这四个样式，顺序变换可能出现问题。</p>
+            
+        </div>
+        <div class="question">
+            <h2 class="title">一行省略</h2>
+            <p>overflow:hidden;text-overflow: ellipsis; white-space: nowrap;</p>
+            
+        </div>
+    </section>
+    <div class="html_foot">
+        <p>本网站纯属个人兴趣制作，当中的内容有些摘自其他文章，有些是自己工作中的总结，而且本站制作目的只是为了总结自己遇到的问题及解决方案，以便以后方便查阅，所以不涉及到任何侵权问题，而且本网站不保证内容一定正确，望谅解。</p>
+    </div>
+</body>
+</html>
